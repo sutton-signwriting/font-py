@@ -74,12 +74,6 @@ All functions are **fully typed**, **validated**, and **documented** with Python
 
 ## Development
 
-NOTE: for documentation in PDF and EPUB
-
-    sudo apt install latexmk
-
-### Development Steps
-
 ```bash
 # 1. Clone the repo
 git clone https://github.com/sutton-signwriting/font-py.git

@@ -8,14 +8,9 @@ Evaluation report: https://www.skypack.dev/view/@sutton-signwriting/core
 
 ## [Unreleased]
 ### Todo
-* Move tokenizer data types to datatypes.py
-* Integrate data types into various functions
-* Jupyter Notebooks: Multiple notebooks for in-depth teaching of draft-slevinski-formal-signwriting.
-* HTML Notebook Exports: Static versions for GitHub Pages.
-* Binder: Live, interactive notebooks online.
 
-## [1.0.0] - 2025-11-07
+## [1.0.0] - 2025-11-14
 ### Added
-- full port of JS package sutton-signwriting/core
+- full port of JS package sutton-signwriting/font-db
 - testing, documentation, and library structure
 
