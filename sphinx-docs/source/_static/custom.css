@@ -1,0 +1,16 @@
+/* Load SuttonSignWritingOneD font */
+@font-face {
+    font-family: "SuttonSignWritingOneD";
+    src: local('SuttonSignWritingOneD'),
+         url('https://cdn.rawgit.com/Slevinski/SuttonSignWriting/master/assets/SuttonSignWritingOneD.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, p, div.document, .documentwrapper, .bodywrapper, .sphinxsidebar, .wy-nav-content {
+    font-family: SuttonSignWritingOneD, Lato, proxima-nova, Helvetica Neue, Arial, sans-serif;
+}
+
+pre, span, code, .highlight {
+    font-family: SuttonSignWritingOneD, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, Courier, monospace;
+}

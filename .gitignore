@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.env/
+.venv/
+.coverage
+.python-version
+coverage.xml
+sphinx-docs/build/
+docs/.doctrees/
+docs/.buildinfo*
+docs/_sources

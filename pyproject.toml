@@ -1,0 +1,66 @@
+[tool.poetry]
+name = "sutton-signwriting-font"
+version = "1.0.0"
+description = "Python tools for Sutton SignWriting font visualization in SVG and PNG."
+authors = ["Steve Slevinski <Slevinski@signwriting.org>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/sutton-signwriting/font-py"
+repository = "https://github.com/sutton-signwriting/font-py"
+documentation = "https://sutton-signwriting.io/font-py"
+keywords = ["signwriting", "fsw", "swu", "sign-language", "sutton-signwriting", "svg", "png", "visualization"]
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Topic :: Text Processing :: Linguistic",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+]
+packages = [{include = "sutton_signwriting_font", from = "src"}]
+include = ["LICENSE", "README.md", "src/sutton_signwriting_font/db/iswa2010.db", "src/sutton_signwriting_core/py.typed"]
+exclude = ["tests", "*.pyc"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+sutton-signwriting-core = "^1.1.2"
+cairosvg = "^2.7.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.0" # code formatting
+ruff = "^0.6.9" # fast linting
+mypy = "^1.11.2" # type checking
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+
+[[tool.mypy.overrides]]
+module = "cairosvg"
+ignore_missing_imports = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "^8.2.3"
+sphinx-rtd-theme = "^3.0.2"
+sphinx-toolbox = "^4.0.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.3"
+pytest-cov = "^5.0.0"
+
+[tool.pytest.ini_options]
+addopts = "-v"
+testpaths = ["tests"]
